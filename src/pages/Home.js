@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
+import { getAuth } from "firebase/auth";
 
 function Home({ isAuth }) {
   const [postLists, setPostList] = useState([]);
@@ -42,7 +43,7 @@ function Home({ isAuth }) {
               </div>
             </div>
             <div className="postTextContainer"> {post.postText} </div>
-            <h3>@</h3>
+            <h3> 📍 {post.location}</h3>
           </div>
         );
       })}
