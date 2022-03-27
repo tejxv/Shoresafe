@@ -9,7 +9,7 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAzPfuvryU9N3WHQ-vB7a0aY1cHABXQsAU",
-  authDomain: "https://www.shoresafe.dev/",
+  authDomain: "marine2-f2279.firebaseapp.com",
   projectId: "marine2-f2279",
   storageBucket: "marine2-f2279.appspot.com",
   messagingSenderId: "288690639823",
