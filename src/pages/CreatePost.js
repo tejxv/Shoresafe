@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 function CreatePost({ isAuth }) {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
+  const [location, setLocation] = useState("");
 
   const postsCollectionRef = collection(db, "posts");
   let navigate = useNavigate();
@@ -14,6 +15,7 @@ function CreatePost({ isAuth }) {
     await addDoc(postsCollectionRef, {
       title,
       postText,
+      location,
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
     });
     navigate("/");
@@ -28,26 +30,35 @@ function CreatePost({ isAuth }) {
   return (
     <div className="createPostPage">
       <div className="cpContainer">
-        <h1>Create A Post</h1>
+        <h1>Create an Event</h1>
         <div className="inputGp">
-          <label> Title:</label>
+          <label> Name your event:</label>
           <input
-            placeholder="Title..."
+            placeholder="Name your event"
             onChange={(event) => {
               setTitle(event.target.value);
             }}
           />
         </div>
         <div className="inputGp">
-          <label> Post:</label>
+          <label> Event Description</label>
           <textarea
-            placeholder="Post..."
+            placeholder="Describe your event"
             onChange={(event) => {
               setPostText(event.target.value);
             }}
           />
         </div>
-        <button onClick={createPost}> Submit Post</button>
+        <div className="inputGp">
+          <label> Location:</label>
+          <input
+            placeholder="Enter the location of event"
+            onChange={(event) => {
+              setLocation(event.target.value);
+            }}
+          />
+        </div>
+        <button onClick={createPost}> Create Event</button>
       </div>
     </div>
   );
