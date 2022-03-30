@@ -7,6 +7,8 @@ function CreatePost({ isAuth }) {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
   const [location, setLocation] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
 
   const postsCollectionRef = collection(db, "posts");
   let navigate = useNavigate();
@@ -16,6 +18,8 @@ function CreatePost({ isAuth }) {
       title,
       postText,
       location,
+      startDate,
+      endDate,
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
     });
     navigate("/");
@@ -50,13 +54,39 @@ function CreatePost({ isAuth }) {
           />
         </div>
         <div className="inputGp">
+          <label> Start Date</label>
+          <input
+            type="date"
+            name="Start date"
+            onChange={(event) => {
+              setStartDate(event.target.value);
+            }}
+          />
+        </div>
+        <div className="inputGp">
+          <label> End Date</label>
+          <input
+            type="date"
+            name="End date"
+            onChange={(event) => {
+              setEndDate(event.target.value);
+            }}
+          />
+        </div>
+        <div className="inputGp">
           <label> Location:</label>
           <input
+            id="pac-input"
+            class="controls"
+            type="text"
+            placeholder="Search Box"
+          />
+          {/* <input
             placeholder="Enter the location of event"
             onChange={(event) => {
               setLocation(event.target.value);
             }}
-          />
+          /> */}
         </div>
         <button onClick={createPost}> Create Event</button>
       </div>

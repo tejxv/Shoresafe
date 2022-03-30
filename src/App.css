@@ -1,5 +1,10 @@
+@import url('https://rsms.me/inter/inter.css');
+* { font-family: 'Inter', sans-serif; }
 .App {
   text-align: center;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   padding: 0%;
@@ -10,19 +15,20 @@ body {
 nav {
   margin: 0;
   width: 100%;
-  height: 80px;
-  background-color: black;
+  position: absolute;
+  height: 10vh;
+  background-color: white;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   color: white;
   text-decoration: none;
+  justify-content: space-evenly;
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
-  margin: 10px;
   font-size: 25px;
 }
 
@@ -136,23 +142,31 @@ textarea {
 
 .homePage {
   width: 100%;
-  min-height: calc(100vh - 80px);
-  height: auto;
+  height: 200vh;
+  /* height: auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  overflow: hidden;
+}
+.homePage h1 {
+  color: white;
+}
+.text h1 {
+  font-size: 3em;
+  line-height: 0;
 }
 
 .homePage .post {
-  width: 600px;
-  height: auto;
-  max-height: 600px;
-  background-color: rgb(250, 250, 250);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 15px;
+    height: auto;
+    max-height: 600px;
+    background-color: #f2f2f2;
+    box-shadow: rgb(0 0 0 / 29%) 0px 6px 0px;
+    margin: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    min-width: 300px;
 }
 
 .post .postHeader {
@@ -186,4 +200,145 @@ textarea {
   width: 100%;
   overflow: hidden;
   overflow-y: auto;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  border: 0px solid red;
+  display: flex;
+}
+.text {
+  padding: 0 1em;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+.text p {
+  font-size: 1.4em;
+}
+.btn {
+  font-size: 1.4em;
+  color: black;
+  padding: 0.8em 1.6em;
+  background-color: #E9E9E9;
+  border-radius: 10px;
+}
+.img {
+  width: 50%;
+  height: 100%;
+  background-image: url("../src/bg.png");
+  background-position: center;
+}
+
+.eventsContainer {
+  height: 200vh;
+  border: 0px solid red;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 49%)),url("../src/bg2.png");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.map {
+  height: 600px;
+  border: 0px solid blue;
+  width: 50%;
+}
+.event {
+  border: 0px solid yellow;
+  height: 600px;
+  width: 50%;
+}
+.events {
+  border: 0px solid red;
+  width:  90%;
+  height: 50px;
+  margin: 1em;
+  border-radius: 5px; 
+}
+.mutedbtn {
+  font-size: .8em;
+  margin: 1.2em 0;
+  color: #6c6c6c;
+}
+.about {
+  padding: 0 1em;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(7 255 111)),url("../src/bg3.jpg");
+  background-position: center;
+  background-size: cover;
+  transform: translate(0px,-100px);
+}
+.about p {
+  font-size: 1.4em;
+}
+.eventsContainerAll {
+  height: 200vh;
+  border: 0px solid red;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 49%)),url("../src/bg2.png");
+  background-position: center;
+  background-size: cover;
+}
+.aboveHome {
+  background-color: #17fe70;
+}
+.homePageAll {
+  width: 100%;
+  height: 200vh;
+  /* height: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+.homePageAll .post {
+  height: auto;
+  max-height: 600px;
+  background-color: #f2f2f2;
+  box-shadow: rgb(0 0 0 / 29%) 0px 6px 0px;
+  margin: 20px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  min-width: 300px;
+}
+.seeMore {
+  height: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0px,-100px);
+    background: linear-gradient(180deg, rgb(255 249 249 / 0%) 0%, #000000 100%), #00000000;
+}
+
+.seeMoreBtn {
+	padding: 14px 40px;
+    background-color: #e8d6d6;
+    color: black;
+    border-radius: 7px;
+    transition: transform 250ms cubic-bezier(.2,.8,.4,1);
+    
+  }
+
+.seeMoreBtn:hover {
+	transform: scale(1.05);
+  }
+
+.seeMoreBtn:active {
+	transform: scale(0.9);
 }

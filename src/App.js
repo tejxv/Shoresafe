@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import CreatePost from "./pages/CreatePost";
 import Login from "./pages/Login";
+import Posts from "./pages/Posts";
 import { useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase-config";
@@ -20,7 +21,9 @@ function App() {
   return (
     <Router>
       <nav>
-        <Link to="/"> Home </Link>
+        <a href="/" className="logobtn">
+          Shoresafe.dev
+        </a>
 
         {!isAuth ? (
           <Link to="/login"> Login </Link>
@@ -33,8 +36,9 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
+        <Route path="/createpost" element={<CreatePost />} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
+        <Route path="/posts" element={<Posts />} />
       </Routes>
     </Router>
   );
