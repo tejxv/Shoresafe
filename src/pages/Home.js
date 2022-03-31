@@ -26,7 +26,7 @@ function Home({ isAuth }) {
         <div className="home">
           <div className="text">
             {" "}
-            <h1>Shoresafe.dev </h1>
+            <h1>Shoresafe </h1>
             <p>Connecting Communities, Divers and People.</p>
             <a href="/createpost" className="btn">
               Host your event ->
