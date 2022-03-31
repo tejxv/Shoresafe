@@ -166,7 +166,7 @@ textarea {
     margin: 20px;
     padding: 10px 30px;
     border-radius: 10px;
-    min-width: 300px;
+    width: 300px;
 }
 
 .post .postHeader {
@@ -289,7 +289,7 @@ textarea {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  background-image: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 49%)),url("../src/bg2.png");
+  /* background-image: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 49%)),url("../src/bg2.png"); */
   background-position: center;
   background-size: cover;
 }
@@ -306,7 +306,7 @@ textarea {
   padding-top: 80px;
 }
 .homePageAll h1 {
-  color: white;
+  color: black;
 }
 .homePageAll .post {
   height: auto;
@@ -316,7 +316,7 @@ textarea {
   margin: 20px;
   padding: 10px 30px;
   border-radius: 10px;
-  min-width: 300px;
+  width: 300px;
 }
 .seeMore {
   height: 100px;
