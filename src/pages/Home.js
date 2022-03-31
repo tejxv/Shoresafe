@@ -26,12 +26,8 @@ function Home({ isAuth }) {
         <div className="home">
           <div className="text">
             {" "}
-            <h1>WHAT WE DO </h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
+            <h1>Shoresafe.dev </h1>
+            <p>Connecting Communities, Divers and People.</p>
             <a href="/createpost" className="btn">
               Host your event ->
             </a>
@@ -86,11 +82,11 @@ function Home({ isAuth }) {
           </a>
         </div>
         <div className="about" id="about">
-          <h1>About us </h1>
+          <h1>About Us </h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
+            Oragnise Meetups and Community events.<br></br> Bringing together
+            divers and people for a greater cause and perform various things
+            together.
           </p>
         </div>
       </div>

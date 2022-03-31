@@ -222,9 +222,9 @@ textarea {
 }
 .btn {
   font-size: 1.4em;
-  color: black;
+  color: white;
   padding: 0.8em 1.6em;
-  background-color: #E9E9E9;
+  background-color: #ff0069;
   border-radius: 10px;
 }
 .img {
@@ -268,15 +268,14 @@ textarea {
   color: #6c6c6c;
 }
 .about {
-  padding: 0 1em;
-  width: 100%;
+  padding: 0 6em;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: flex-start;
-  background-image: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(7 255 111)),url("../src/bg3.jpg");
+  background-image: linear-gradient(to bottom, rgb(255 255 255 / 0%), rgb(223 209 255)),url("../src/bg3.jpg");
   background-position: center;
   background-size: cover;
   transform: translate(0px,-100px);
@@ -295,7 +294,7 @@ textarea {
   background-size: cover;
 }
 .aboveHome {
-  background-color: #17fe70;
+  background-color: #dfd2ff;
 }
 .homePageAll {
   width: 100%;
