@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
-import { getAuth } from "firebase/auth";
 import Moment from "react-moment";
 
 function Home({ isAuth }) {
